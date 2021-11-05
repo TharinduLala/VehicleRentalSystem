@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addVehicleFormAP" prefHeight="575.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewVehicleFormController">
+   <children>
+      <Label layoutX="93.0" layoutY="25.0" text="Add New Vehicle">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="105.0" text="Vehicle No :" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <JFXButton fx:id="btnAdd" alignment="CENTER" buttonType="RAISED" layoutX="25.0" layoutY="511.0" onMouseClicked="#btnAdd_Action" prefHeight="50.0" prefWidth="400.0" ripplerFill="#2c3e50" style="-fx-background-color: #2980b9; -fx-background-radius: 20;" text="Add" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtVehiNo" layoutX="169.0" layoutY="136.0" onKeyReleased="#addVehicle_KeyEvent" prefHeight="40.0" prefWidth="250.0" promptText="enter vehicle number" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="100.0" />
+      <TextField fx:id="txtPPKM" layoutX="169.0" layoutY="187.0" onKeyReleased="#addVehicle_KeyEvent" prefHeight="40.0" prefWidth="250.0" promptText="enter price per kilometer" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="450.0" />
+      <TextField fx:id="txtBrand" layoutX="155.0" layoutY="228.0" onKeyReleased="#addVehicle_KeyEvent" prefHeight="40.0" prefWidth="250.0" promptText="enter brand" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="200.0" />
+      <TextField fx:id="txtMeterValue" layoutX="175.0" layoutY="295.0" onKeyReleased="#addVehicle_KeyEvent" prefHeight="40.0" prefWidth="250.0" promptText="enter current meter value" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="400.0" />
+      <TextField fx:id="txtModel" layoutX="173.0" layoutY="346.0" onKeyReleased="#addVehicle_KeyEvent" prefHeight="40.0" prefWidth="250.0" promptText="enter model" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="250.0" />
+      <TextField fx:id="txtNoOfSeats" layoutX="173.0" layoutY="397.0" onKeyReleased="#addVehicle_KeyEvent" prefHeight="40.0" prefWidth="250.0" promptText="enter number of seats" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="350.0" />
+      <ComboBox fx:id="cmbType" layoutX="170.0" layoutY="416.0" prefHeight="40.0" prefWidth="250.0" promptText="select vehicle type" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="300.0" />
+      <ComboBox fx:id="cmbOwnerNIC" layoutX="170.0" layoutY="477.0" prefHeight="40.0" prefWidth="250.0" promptText="select owner nic " AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="150.0" />
+      <Label layoutX="35.0" layoutY="205.0" text="Brand :" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="255.0" text="Model :" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="305.0" text="Type :" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="355.0" text="No of seats :" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="405.0" text="Meter value :" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="455.0" text="PPKM :" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="155.0" text="Owner NIC :" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnClose" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="403.0" layoutY="14.0" onMouseClicked="#btnClose_Action" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #ff0000; -fx-background-radius: 10;" textAlignment="CENTER" textFill="RED" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="12" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

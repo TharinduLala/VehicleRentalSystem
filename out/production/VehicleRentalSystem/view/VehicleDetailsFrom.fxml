@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailsFormAp" prefHeight="279.0" prefWidth="400.0" style="-fx-border-color: #2980b9; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehicleDetailsFromController">
+   <children>
+      <Label layoutX="25.0" layoutY="49.0" text="Owner NIC :" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="107.0" text="Brand :" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="162.0" text="Model :" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="217.0" text="Meter Value :" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="4.0" layoutY="242.0" text="(When assign to company)">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOwnerNic" editable="false" focusTraversable="false" layoutX="145.0" layoutY="50.0" prefHeight="40.0" prefWidth="240.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtMeterValue" editable="false" focusTraversable="false" layoutX="145.0" layoutY="215.0" prefHeight="40.0" prefWidth="240.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="215.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtBrand" editable="false" focusTraversable="false" layoutX="145.0" layoutY="105.0" prefHeight="40.0" prefWidth="240.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="105.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtModel" editable="false" focusTraversable="false" layoutX="145.0" layoutY="160.0" prefHeight="40.0" prefWidth="240.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="160.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnClose" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="366.0" layoutY="5.0" onMouseClicked="#btnClose_Action" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #ff0000; -fx-background-radius: 10;" textAlignment="CENTER" textFill="RED" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="12" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

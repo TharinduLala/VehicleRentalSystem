@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="driversFormAP" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #8e44ad;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewDriversFormController">
+   <children>
+      <Label layoutX="44.0" layoutY="38.0" text="Drivers" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="175.0" layoutY="53.0" prefHeight="0.0" prefWidth="761.0" AnchorPane.topAnchor="55.0" />
+      <ComboBox fx:id="cmbDrivers" layoutX="24.0" layoutY="312.0" prefHeight="40.0" prefWidth="303.0" promptText="Drivers" style="-fx-background-radius: 10; -fx-background-color: #ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <TableView fx:id="tblDrivers" layoutX="25.0" layoutY="341.0" prefHeight="320.0" prefWidth="900.0" stylesheets="@Css/TableStyle.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+        <columns>
+          <TableColumn fx:id="colNIC" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="NIC" />
+          <TableColumn fx:id="colName" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Name" />
+            <TableColumn fx:id="colContact" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Contact" />
+            <TableColumn fx:id="colLicenseNo" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="License No" />
+            <TableColumn fx:id="colAddress" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Address" />
+            <TableColumn fx:id="colDOB" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="DOB" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtDriverNIC" layoutX="52.0" layoutY="114.0" prefHeight="40.0" prefWidth="230.0" promptText="search driver" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="287.0" layoutY="114.0" onMouseClicked="#btnSearch_Action" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #7f8c8d; -fx-background-radius: 20;" text="Search" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="15" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="421.0" layoutY="119.0" text="Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="88.0" text="Driver NIC" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="51.0" layoutY="193.0" text="Contact :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDriverContact" editable="false" layoutX="178.0" layoutY="190.0" prefHeight="40.0" prefWidth="230.0" promptText="contact" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDriverName" editable="false" layoutX="496.0" layoutY="116.0" prefHeight="40.0" prefWidth="420.0" promptText="driver name" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btn_Clear" buttonType="RAISED" layoutX="796.0" layoutY="191.0" onMouseClicked="#btnClear_Action" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #e67e22; -fx-background-radius: 20;" text="Clear" textAlignment="RIGHT" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TIMES" size="20" />
+         </graphic>
+      </JFXButton>
+      <Separator layoutX="25.0" layoutY="297.0" prefHeight="3.0" prefWidth="900.0" AnchorPane.leftAnchor="25.0" />
+      <Label layoutX="134.0" layoutY="196.0" text="(+94)" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="429.0" layoutY="193.0" text="Availability :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAvailability" layoutX="552.0" layoutY="195.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="259.0" text="On/Off Duty :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnDutyOn" buttonType="RAISED" layoutX="193.0" layoutY="254.0" onMouseClicked="#btnDutyOn_Action" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #27ae60; -fx-background-radius: 20;" text="Duty On" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SIGN_IN" size="15" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDutyOff" buttonType="RAISED" layoutX="331.0" layoutY="254.0" onMouseClicked="#btnDutyOff_Action" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 20;" text="Duty Off" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="15" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="35.0" fitWidth="43.0" layoutX="293.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/switch.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

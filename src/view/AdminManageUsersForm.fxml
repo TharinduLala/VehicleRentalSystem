@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="usersFormAP" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #16a085;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminManageUsersFormController">
+   <children>
+      <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="40.0" layoutY="291.0" onMouseClicked="#btnClear_Action" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #e67e22; -fx-background-radius: 20;" text="Clear" textAlignment="RIGHT" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="291.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TIMES" size="20" />
+         </graphic>
+      </JFXButton>
+      <TextField fx:id="txtSearchUserNic" layoutX="590.0" layoutY="84.0" prefHeight="40.0" prefWidth="230.0" promptText="search user" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="825.0" layoutY="84.0" onMouseClicked="#btnSearch_Action" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #7f8c8d; -fx-background-radius: 20;" text="Search" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="15" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="390.0" layoutY="174.0" text="Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="590.0" layoutY="58.0" text="User NIC" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="42.0" layoutY="231.0" text="User Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="737.0" layoutY="233.0" text="Role :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="158.0" layoutY="228.0" onKeyReleased="#userTextFields_Key_Released" prefHeight="40.0" prefWidth="222.0" promptText="user name" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtName" layoutX="465.0" layoutY="171.0" onKeyReleased="#userTextFields_Key_Released" prefHeight="40.0" prefWidth="433.0" promptText="user full name" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnRemove" buttonType="RAISED" layoutX="790.0" layoutY="291.0" onMouseClicked="#btnRemove_Action" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #c0392b; -fx-background-radius: 20;" text="Remove" textFill="WHITE" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="291.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="20" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="39.0" layoutY="15.0" text="Users" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="128.0" layoutY="43.0" prefHeight="3.0" prefWidth="797.0" AnchorPane.topAnchor="55.0" />
+      <Separator layoutX="25.0" layoutY="339.0" prefWidth="900.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="339.0" />
+      <TableView fx:id="tblUsers" layoutX="29.0" layoutY="364.0" prefHeight="320.0" prefWidth="900.0" stylesheets="@Css/TableStyle.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+        <columns>
+          <TableColumn fx:id="colNIC" editable="false" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" text="NIC" />
+          <TableColumn fx:id="colName" editable="false" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" text="Name" />
+            <TableColumn fx:id="colUserName" editable="false" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" text="UserName" />
+            <TableColumn fx:id="colPassword" editable="false" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" text="Password" />
+            <TableColumn fx:id="colRole" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Role" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnAddNew" alignment="CENTER" buttonType="RAISED" layoutX="653.0" layoutY="290.0" onMouseClicked="#btnAddNew_Action" prefHeight="35.0" prefWidth="120.0" ripplerFill="#2c3e50" style="-fx-background-color: #2980b9; -fx-background-radius: 20;" text="Add" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="177.0" AnchorPane.topAnchor="290.0">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="20" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="40.0" layoutY="174.0" text="NIC :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNic" layoutX="113.0" layoutY="169.0" onKeyReleased="#userTextFields_Key_Released" prefHeight="40.0" prefWidth="255.0" promptText="user nic" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="390.0" layoutY="231.0" text="Password :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPassword" layoutX="493.0" layoutY="228.0" onKeyReleased="#userTextFields_Key_Released" prefHeight="40.0" prefWidth="222.0" promptText="password" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <RadioButton fx:id="radioBtnAdmin" layoutX="118.0" layoutY="85.0" mnemonicParsing="false" text="Admin" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radioBtnUser" layoutX="42.0" layoutY="85.0" mnemonicParsing="false" text="User" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="40.0" layoutY="114.0" text="(if you add new user,please select user role)" textFill="WHITE" />
+      <Label fx:id="lblRole" alignment="CENTER" layoutX="799.0" layoutY="233.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

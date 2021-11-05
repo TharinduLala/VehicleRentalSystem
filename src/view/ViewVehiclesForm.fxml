@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="vehiclesFormAP" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #8e44ad;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewVehiclesFormController">
+   <children>
+      <Label layoutX="54.0" layoutY="48.0" text="Vehicles" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="195.0" layoutY="54.0" prefHeight="2.0" prefWidth="745.0" AnchorPane.topAnchor="55.0" />
+      <TextField fx:id="txtVehiNo" layoutX="62.0" layoutY="100.0" prefHeight="40.0" prefWidth="209.0" promptText="search vehicle" style="-fx-background-color:#ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="287.0" layoutY="100.0" onMouseClicked="#btnSearch_Action" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #7f8c8d; -fx-background-radius: 20;" text="Search" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="15" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="414.0" layoutY="105.0" text="Type :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="75.0" text="Vehicle No" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="59.0" layoutY="179.0" text="No of Seats :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNoofSeats" editable="false" layoutX="183.0" layoutY="175.0" prefHeight="40.0" prefWidth="99.0" promptText="no of seats" style="-fx-background-radius: 10; -fx-background-color: #ffffff;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtVehiType" editable="false" layoutX="476.0" layoutY="102.0" prefHeight="40.0" prefWidth="158.0" promptText="vehicle type" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="806.0" layoutY="240.0" onMouseClicked="#btnClear_Action" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #e67e22; -fx-background-radius: 20;" text="Clear" textAlignment="RIGHT" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TIMES" size="20" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="673.0" layoutY="105.0" text="PPKM(Rs.) :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPPKM" editable="false" layoutX="787.0" layoutY="102.0" prefHeight="40.0" prefWidth="139.0" promptText="ppkm" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="287.0" layoutY="178.0" text="Meter Reading :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMeterReading" editable="false" layoutX="440.0" layoutY="175.0" prefHeight="40.0" prefWidth="176.0" promptText="meter reading" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="cmbVehicles" layoutX="34.0" layoutY="309.0" prefHeight="40.0" prefWidth="303.0" promptText="Vehicles" style="-fx-background-radius: 10; -fx-background-color: #ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <Separator layoutX="35.0" layoutY="282.0" prefHeight="3.0" prefWidth="900.0" />
+      <TableView fx:id="tblVehicles" layoutX="25.0" layoutY="362.0" prefHeight="320.0" prefWidth="900.0" stylesheets="@Css/TableStyle.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+        <columns>
+          <TableColumn fx:id="colVehiNo" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" text="Vehicle No" />
+          <TableColumn fx:id="colType" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" text="Type" />
+            <TableColumn fx:id="colNoOfSeats" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" text="No of Seats" />
+            <TableColumn fx:id="colPPKM" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" text="PPKM(Rs.)" />
+            <TableColumn fx:id="colMeterReading" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" text="Meter Reading" />
+        </columns>
+      </TableView>
+      <Label layoutX="627.0" layoutY="177.0" text="Availability :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAvailability" layoutX="744.0" layoutY="177.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="242.0" text="On/Off Duty :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnInWork" buttonType="RAISED" layoutX="201.0" layoutY="237.0" onMouseClicked="#btnInWork_Action" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #27ae60; -fx-background-radius: 20;" text="In work" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnInRepair" buttonType="RAISED" layoutX="339.0" layoutY="237.0" onMouseClicked="#btnInRepair_Action" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 20;" text="In repair" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="35.0" fitWidth="43.0" layoutX="301.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/switch.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

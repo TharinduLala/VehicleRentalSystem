@@ -1,0 +1,165 @@
+DROP DATABASE IF EXISTS Vehicle_Rental_System;
+CREATE DATABASE IF NOT EXISTS Vehicle_Rental_System;
+SHOW DATABASES ;
+USE Vehicle_Rental_System;
+
+########################################################
+#   Status KeyWords                                    #
+########################################################
+inARide---->vehicle or driver in a hire
+notInARide---->vehicle or driver not in a hire and in work
+leaved---->driver duty off
+inRepair---->vehicle in garage for repair
+no---->Payment status of booking(not paid)
+yes---->Payment status of booking(paid)
+Cash---->Payment type of bill
+Card---->Payment type of bill
+
+########################################################
+Customer Table
+########################################################
+DROP TABLE IF EXISTS Customer;
+CREATE TABLE IF NOT EXISTS Customer(
+    CustNIC VARCHAR(15),
+    CustName VARCHAR(30) NOT NULL DEFAULT 'Unknown',
+    CustAddress TEXT,
+    CustContact INT(12),
+    CONSTRAINT PRIMARY KEY (CustNIC)
+    );
+SHOW TABLES ;
+DESCRIBE Customer;
+
+########################################################
+VehicleOwners Table
+########################################################
+
+DROP TABLE IF EXISTS VehicleOwner;
+CREATE TABLE IF NOT EXISTS VehicleOwner(
+    OwnerNIC VARCHAR(15),
+    OwnerName VARCHAR(30) NOT NULL DEFAULT 'Unknown',
+    OwnerAddress TEXT,
+    OwnerContact INT(12),
+    CONSTRAINT PRIMARY KEY (OwnerNIC)
+    );
+SHOW TABLES ;
+DESCRIBE VehicleOwner;
+
+########################################################
+Driver Table
+########################################################
+
+DROP TABLE IF EXISTS Driver;
+CREATE TABLE IF NOT EXISTS Driver(
+    driverNIC VARCHAR(15),
+    driverName VARCHAR(30) NOT NULL DEFAULT 'Unknown',
+    availability VARCHAR(10),
+    CONSTRAINT PRIMARY KEY (driverNIC)
+    );
+SHOW TABLES ;
+DESCRIBE Driver;
+
+########################################################
+DriverDetail Table
+########################################################
+
+DROP TABLE IF EXISTS driverDetail;
+CREATE TABLE IF NOT EXISTS driverDetail(
+    driverNIC VARCHAR(15),
+    driverLicenseNo VARCHAR(15),
+    driverAddress Text,
+    driverContact INT(12),
+    driverDOB DATE,
+    CONSTRAINT PRIMARY KEY (driverNIC),
+    CONSTRAINT FOREIGN KEY (driverNIC) REFERENCES Driver(driverNIC) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+SHOW TABLES ;
+DESCRIBE driverDetail;
+
+########################################################
+Vehicle Table
+########################################################
+
+DROP TABLE IF EXISTS Vehicle;
+CREATE TABLE IF NOT EXISTS Vehicle(
+    vehicleNo VARCHAR(10),
+    vehicleType VARCHAR(15),
+    ppkm DOUBLE,
+    meterValue VARCHAR(8),
+    noOfSeats INT,
+    OwnerNIC VARCHAR(15),
+    availability VARCHAR(10),
+    CONSTRAINT PRIMARY KEY (vehicleNo),
+    CONSTRAINT FOREIGN KEY (OwnerNIC) REFERENCES VehicleOwner(OwnerNIC) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+SHOW TABLES ;
+DESCRIBE Vehicle;
+
+########################################################
+VehicleRegDetails Table
+########################################################
+
+DROP TABLE IF EXISTS VehicleRegDetail;
+CREATE TABLE IF NOT EXISTS VehicleRegDetail(
+    vehicleNo VARCHAR(10),
+    vehicleBrand VARCHAR(15),
+    vehicleModel VARCHAR(15),
+    meterReadingAssigning VARCHAR(8),
+    CONSTRAINT PRIMARY KEY (vehicleNo),
+    CONSTRAINT FOREIGN KEY (vehicleNo) REFERENCES Vehicle(vehicleNo) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+SHOW TABLES ;
+DESCRIBE VehicleRegDetail;
+
+########################################################
+Booking Table
+########################################################
+
+DROP TABLE IF EXISTS Booking;
+CREATE TABLE IF NOT EXISTS Booking(
+    bookingID VARCHAR(10),
+    CustNIC VARCHAR(15),
+    driverNIC VARCHAR(15),
+    vehicleNo VARCHAR(10),
+    vehicleType VARCHAR(15),
+    startMeterReading VARCHAR(8),
+    bookingDate DATE,
+    paidStatus VARCHAR (10),
+    CONSTRAINT PRIMARY KEY (bookingID)
+    );
+SHOW TABLES ;
+DESCRIBE Booking;
+
+########################################################
+Bill Table
+########################################################
+
+DROP TABLE IF EXISTS Bill;
+CREATE TABLE IF NOT EXISTS Bill(
+    billID VARCHAR(10),
+    bookingID VARCHAR(10),
+    totalDistance DOUBLE,
+    totalCost DOUBLE,
+    paymentType VARCHAR(10),
+    bilDate DATE,
+    CONSTRAINT PRIMARY KEY (billID),
+    CONSTRAINT FOREIGN KEY (bookingID) REFERENCES Booking(bookingID) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+SHOW TABLES ;
+DESCRIBE Bill;
+
+########################################################
+LogInDetails Table
+########################################################
+
+DROP TABLE IF EXISTS LogInDetails;
+CREATE TABLE IF NOT EXISTS LogInDetails(
+    nic VARCHAR(15),
+    name VARCHAR(30) NOT NULL DEFAULT 'Unknown',
+    userName VARCHAR(15),
+    passWord VARCHAR(15),
+    role VARCHAR(10),
+    CONSTRAINT PRIMARY KEY (nic,userName)
+    );
+SHOW TABLES ;
+DESCRIBE LogInDetails;
+

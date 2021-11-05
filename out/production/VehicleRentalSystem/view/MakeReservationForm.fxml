@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="newBookingAP" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #8e44ad;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MakeReservationFormController">
+   <children>
+      <JFXButton fx:id="btnStartRide" buttonType="RAISED" layoutX="307.0" layoutY="602.0" onMouseClicked="#btnStartRide_Action" prefHeight="60.0" prefWidth="350.0" style="-fx-background-color: #27ae60; -fx-background-radius: 20;" text="Start Ride" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ComboBox fx:id="cmbVehicleType" layoutX="30.0" layoutY="100.0" prefHeight="40.0" prefWidth="180.0" promptText="vehicle type" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <ComboBox fx:id="cmbAvailableVehicles" layoutX="30.0" layoutY="167.0" prefHeight="40.0" prefWidth="230.0" promptText="available vehicle numbers" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <Label layoutX="335.0" layoutY="246.0" text="No of seats :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="245.0" text="Price per KM :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="335.0" layoutY="169.0" text="Meter reading :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="25.0" layoutY="419.0" prefHeight="0.0" prefWidth="900.0" />
+      <Label fx:id="lblNoOfSeats" layoutX="484.0" layoutY="247.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPPKM" layoutX="195.0" layoutY="247.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCustomerNIC" layoutX="25.0" layoutY="478.0" prefHeight="40.0" prefWidth="192.0" promptText="customer nic" style="-fx-background-radius: 10; -fx-background-color: #ffffff;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Label layoutX="30.0" layoutY="455.0" text="Customer NIC" textFill="WHITE" />
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="225.0" layoutY="478.0" onMouseClicked="#btnSearch_Action" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #7f8c8d; -fx-background-radius: 20;" text="Search" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="15" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Label layoutX="25.0" layoutY="543.0" text="Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCusName" layoutX="112.0" layoutY="545.0" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="394.0" layoutY="544.0" text="Contact :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCusContact" layoutX="555.0" layoutY="545.0" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="35.0" layoutY="296.0" prefHeight="0.0" prefWidth="900.0" />
+      <ComboBox fx:id="cmbDrivers" layoutX="35.0" layoutY="351.0" prefHeight="40.0" prefWidth="230.0" promptText="Driver" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <Label layoutX="340.0" layoutY="353.0" text="Driver NIC :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDriverNIC" layoutX="482.0" layoutY="355.0" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="28.0" text="New Booking" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="275.0" layoutY="54.0" prefHeight="3.0" prefWidth="655.0" AnchorPane.topAnchor="55.0" />
+      <Label layoutX="665.0" layoutY="59.0" text="Booking ID :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookingId" alignment="CENTER" layoutX="842.0" layoutY="59.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="495.0" layoutY="544.0" text="(+94)" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMeterReading" layoutX="510.0" layoutY="167.0" prefHeight="40.0" prefWidth="192.0" promptText="enter meter value" style="-fx-background-radius: 10; -fx-background-color: #ffffff;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnAddNewCustomer" alignment="CENTER" buttonType="RAISED" layoutX="767.0" layoutY="447.0" onMouseClicked="#btnAddNewCustomer_Action" prefHeight="37.0" prefWidth="158.0" ripplerFill="#2c3e50" style="-fx-background-color: #2980b9; -fx-background-radius: 20;" text="new customer" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="20" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

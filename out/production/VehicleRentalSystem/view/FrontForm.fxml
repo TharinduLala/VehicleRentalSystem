@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginFormAP" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FrontFormController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@images/logInPage.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="157.0" layoutY="625.0" text="(+94)38-2222222" textFill="WHITE" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="157.0">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="175.0" layoutY="693.0" text="cityridescabs@gmail.com" textFill="WHITE" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="175.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnLoginUser" buttonType="RAISED" layoutX="699.0" layoutY="428.0" onMouseClicked="#btnLoginUser_Action" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: #2980b9; -fx-background-radius: 20;" text="Log In" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER" size="20" />
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="699.0" layoutY="254.0" prefHeight="40.0" prefWidth="350.0" promptText="User Name">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="699.0" layoutY="345.0" prefHeight="40.0" prefWidth="350.0" promptText="Password">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXPasswordField>
+      <Hyperlink fx:id="linkLoginAdmin" layoutX="851.0" layoutY="715.0" onMouseClicked="#linkLoginAdmin_Action" text="If you are an admin, click here" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#2200ff" glyphName="COGS" size="20" />
+         </graphic>
+      </Hyperlink>
+      <Label layoutX="699.0" layoutY="163.0" text="Log In" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

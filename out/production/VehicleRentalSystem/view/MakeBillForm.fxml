@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="makePaymentFormAP" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #8e44ad;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MakeBillFormController">
+   <children>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#7f8c8d" height="80.0" layoutX="89.0" layoutY="565.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="250.0" />
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="93.0" layoutX="724.0" layoutY="420.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Label layoutX="59.0" layoutY="35.0" text="Make Payment" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="299.0" layoutY="63.0" prefHeight="3.0" prefWidth="646.0" AnchorPane.topAnchor="55.0" />
+      <TextField fx:id="txtBookingID" layoutX="40.0" layoutY="121.0" onKeyReleased="#addData_keyEvent" prefHeight="40.0" prefWidth="230.0" promptText="enter booking id" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" AnchorPane.leftAnchor="40.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="275.0" layoutY="121.0" onMouseClicked="#btnSearch_Action" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #7f8c8d; -fx-background-radius: 20;" text="Search" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="15" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="40.0" layoutY="95.0" text="Booking ID" textFill="WHITE" />
+      <Label layoutX="40.0" layoutY="180.0" text="Customer NIC :" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCusNIC" layoutX="184.0" layoutY="196.0" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="726.0" layoutY="68.0" text="Bill ID :" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBillID" layoutX="840.0" layoutY="69.0" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="210.0" text="Customer Name :" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="210.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCusName" layoutX="200.0" layoutY="226.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="210.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="240.0" text="Vehicle No :" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="240.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblVehicleNo" layoutX="164.0" layoutY="252.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="240.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="270.0" text="Vehicle Type :" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="270.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblVehicleType" layoutX="171.0" layoutY="282.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="270.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEndMeterReading" layoutX="750.0" layoutY="225.0" onKeyReleased="#addData_keyEvent" prefHeight="40.0" prefWidth="181.0" promptText="enter value" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="547.0" layoutY="228.0" text="Meter reading at start :" textFill="WHITE" AnchorPane.leftAnchor="540.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="557.0" layoutY="238.0" text="Meter reading at end :" textFill="WHITE" AnchorPane.leftAnchor="540.0" AnchorPane.topAnchor="230.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStartMeterReading" editable="false" layoutX="753.0" layoutY="175.0" prefHeight="40.0" prefWidth="181.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnCalculate" buttonType="RAISED" layoutX="754.0" layoutY="268.0" onMouseClicked="#btnCalculate_Action" prefHeight="35.0" prefWidth="181.0" style="-fx-background-color: #1abc9c; -fx-background-radius: 20;" text="Calculate" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CALCULATOR" size="20" />
+         </graphic>
+      </JFXButton>
+      <Separator layoutX="25.0" layoutY="400.0" prefWidth="900.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+      <Label layoutX="55.0" layoutY="444.0" text="Total Distance(Km) :" textFill="WHITE" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="444.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalDistance" layoutX="344.0" layoutY="444.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="344.0" AnchorPane.topAnchor="444.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="515.0" text="Total Payment (Rs.)" textFill="WHITE" AnchorPane.leftAnchor="76.0" AnchorPane.topAnchor="515.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="284.0" text="PPKM(Rs.)" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="300.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPPKM" layoutX="200.0" layoutY="303.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="300.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnProceed" buttonType="RAISED" layoutX="634.0" layoutY="599.0" onMouseClicked="#btnProceed_Action" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #27ae60; -fx-background-radius: 20;" text="Proceed" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="MAIL_FORWARD" size="25" />
+         </graphic>
+      </JFXButton>
+      <RadioButton fx:id="radioBtnCardPayment" layoutX="754.0" layoutY="439.0" mnemonicParsing="false" text="Card Payment">
+         <graphic>
+            <FontAwesomeIconView glyphName="CREDIT_CARD" size="14" />
+         </graphic>
+      </RadioButton>
+      <RadioButton fx:id="radioBtnCashPayment" layoutX="755.0" layoutY="476.0" mnemonicParsing="false" text="Cash on hand">
+         <graphic>
+            <FontAwesomeIconView glyphName="MONEY" size="14" />
+         </graphic>
+      </RadioButton>
+      <Label fx:id="lblTotalCost" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="583.0" prefHeight="45.0" prefWidth="250.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="721.0" layoutY="527.0" text="Payment Type :" textFill="WHITE" />
+      <Label fx:id="lblPaymentType" layoutX="826.0" layoutY="527.0" textAlignment="CENTER" textFill="WHITE" />
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="23.0" layoutY="362.0" onMouseClicked="#btnCancel_Action" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #e67e22; -fx-background-radius: 20;" text="Cancel" textAlignment="RIGHT" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TIMES" size="20" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

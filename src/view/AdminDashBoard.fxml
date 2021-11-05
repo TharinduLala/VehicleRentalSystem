@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminADashBoardAP" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashBoardController">
+   <children>
+      <Rectangle height="700.0" layoutX="14.0" layoutY="127.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+      <Rectangle height="100.0" layoutX="481.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1200.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Separator layoutX="247.0" layoutY="5.0" opacity="0.5" orientation="VERTICAL" prefHeight="90.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="5.0" />
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="75.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="1.0">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" alignment="CENTER" layoutX="660.0" layoutY="60.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="410.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="CENTER" layoutX="586.0" layoutY="1.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnLogOut" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="90.0" layoutY="716.0" onMouseClicked="#btnLogout_Action" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 40; -fx-border-radius: 40;" text="LogOut" textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIconView glyphName="SIGN_OUT" size="25" textAlignment="CENTER" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <VBox layoutY="209.0" prefHeight="384.0" prefWidth="250.0" spacing="10.0" AnchorPane.topAnchor="209.0">
+         <children>
+            <JFXButton fx:id="btnManageDrivers" alignment="CENTER" buttonType="RAISED" onMouseClicked="#btnManageDrivers_Action" prefHeight="60.0" prefWidth="240.0" ripplerFill="#f1c40f" style="-fx-background-color: #27ae60; -fx-background-radius: 20;" text="Driver" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="25" />
+               </graphic>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnManageVehicles" alignment="CENTER" buttonType="RAISED" onMouseClicked="#btnManageVehicles_Action" prefHeight="60.0" prefWidth="240.0" ripplerFill="#f1c40f" style="-fx-background-color: #27ae60; -fx-background-radius: 20;" text="Vehicles" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CAR" size="25" />
+               </graphic>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnManageOwners" alignment="CENTER" buttonType="RAISED" onMouseClicked="#btnManageOwners_Action" prefHeight="60.0" prefWidth="240.0" ripplerFill="#f1c40f" style="-fx-background-color: #27ae60; -fx-background-radius: 20;" text="Vehicle Owners" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" size="25" />
+               </graphic>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnBillDetails" alignment="CENTER" buttonType="RAISED" onMouseClicked="#btnBillDetails_Action" prefHeight="60.0" prefWidth="240.0" ripplerFill="#f1c40f" style="-fx-background-color: #27ae60; -fx-background-radius: 20;" text="Bill Details" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnManageUsers" alignment="CENTER" buttonType="RAISED" onMouseClicked="#btnManageUsers_Action" prefHeight="60.0" prefWidth="240.0" ripplerFill="#f1c40f" style="-fx-background-color: #27ae60; -fx-background-radius: 20;" text="Manage Users" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="25" />
+               </graphic>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Label layoutX="30.0" layoutY="120.0" text="+(94)38-2222222" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="100.0" text="cityridescabs@gmail.com" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="windowOpenAreaAP" layoutX="251.0" layoutY="100.0" prefHeight="700.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-1.0">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="950.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <image>
+                  <Image url="@images/DashBoard.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
