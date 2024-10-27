@@ -24,7 +24,7 @@ public class FrontFormController {
 
 
     public void btnLoginUser_Action() throws IOException {
-        /*try {
+        try {
             if (txtUserName.getText().equals("")){
                 new Alert(Alert.AlertType.INFORMATION,"Please Enter User Name.....").showAndWait();
             }else if (txtPassword.getText().equals("")){
@@ -48,9 +48,9 @@ public class FrontFormController {
             }
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
-        }*/
-        Stage window = (Stage) loginFormAP.getScene().getWindow();
-        window.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/DashBoard.fxml"))));
+        }
+//        Stage window = (Stage) loginFormAP.getScene().getWindow();
+//        window.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/DashBoard.fxml"))));
     }
 
     public void linkLoginAdmin_Action() throws IOException {

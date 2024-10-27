@@ -23,7 +23,7 @@ public class AdminLoginFormController {
     public JFXPasswordField txtAdminPassword;
 
     public void btnLoginAdmin_Action() throws IOException {
-        /*try {
+        try {
             if (txtAdminUserName.getText().equals("")){
                 new Alert(Alert.AlertType.INFORMATION,"Please Enter User Name.....").showAndWait();
             }else if (txtAdminPassword.getText().equals("")){
@@ -55,13 +55,13 @@ public class AdminLoginFormController {
             }
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
-        }*/
-        Stage window = (Stage) adminLoginFormAP.getScene().getWindow();
-        window.setResizable(false);
-        window.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/AdminDashBoard.fxml"))));
-        Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
-        window.setX((primScreenBounds.getWidth() - window.getWidth()) / 2);
-        window.setY((primScreenBounds.getHeight() - window.getHeight()) / 2);
+        }
+//        Stage window = (Stage) adminLoginFormAP.getScene().getWindow();
+//        window.setResizable(false);
+//        window.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/AdminDashBoard.fxml"))));
+//        Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+//        window.setX((primScreenBounds.getWidth() - window.getWidth()) / 2);
+//        window.setY((primScreenBounds.getHeight() - window.getHeight()) / 2);
     }
 
 }
